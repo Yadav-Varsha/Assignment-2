@@ -1,0 +1,380 @@
+html,
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Custom sidebar width */
+.offcanvas-start {
+    width: 200px;
+}
+
+.logo {
+    left: 0%;
+    padding-bottom: 5px;
+}
+
+
+.navbar {
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+    background-color: #FFFFFF;
+
+
+
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* Adjust spacing between icons */
+    padding-bottom: 10px;
+   font-size: 20px;
+}
+.profile{
+    padding-bottom: 10px;
+    }
+    
+    .profile3{
+        padding-bottom: 10px;
+    } 
+    
+
+
+.sidebar {
+    height: 100vh;
+    background-color: #f8f9fa;
+    position: fixed;
+    margin-top: 0px;
+    left: 0;
+    padding-top: 0px;
+    transition: all 0.3s ease-in-out;
+    z-index: 1050;
+    background-color: #FFFFFF;
+}
+
+
+/* Sidebar Container */
+#sidebar {
+    padding: 0 !important;
+    margin: 0 !important;
+    background-color: #FFFFFF;
+    height: 100vh;
+    width: 270px;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .sidebar {
+        width: 220px;
+        /* Reduce width for tablets */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        width: 0;
+        overflow: hidden;
+    }
+
+    .sidebar.open {
+        width: 250px;
+        /* Expand when toggled */
+    }
+
+
+}
+
+@media (min-width: 992px) {
+    #sidebar {
+        position: fixed;
+        left: 0;
+        top: 70px;
+        /* Height of Navbar */
+        height: calc(100vh - 60px);
+        /* Full height minus navbar */
+
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-right: 1px solid #ddd;
+        z-index: 1040;
+        transform: none !important;
+    }
+}
+
+.accordion-button {
+    padding-left: 10px;
+
+    padding-right: 10px;
+    /* Ensure no extra space */
+    width: 100% !important;
+    display: flex;
+    justify-content: space-between;
+    /* Pushes content and arrow apart */
+    align-items: center;
+}
+
+/* Remove Unwanted Margin */
+.accordion-item {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+.accordion-button img {
+    margin-right: 10px;
+    /* Space between icon and text */
+}
+
+.accordion-body {
+    margin-left: 30px;
+}
+
+
+
+
+/* Hide scrollbar but allow scrolling */
+.dropdown-menu {
+    max-height: 300px;
+    /* Adjust height if needed */
+    overflow-y: auto;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer/Edge */
+}
+
+
+.dropdown-menu::-webkit-scrollbar {
+    display: none;
+}
+
+.content {
+    width: 90%;
+
+
+}
+
+.main-content {
+    margin-top: 90px;
+    margin-left: 290px;
+    background-color: #00000029;
+    padding:7px 7px 7px 7px;
+
+}
+
+.card-container {
+    width: 100%;
+    padding: 10px 10px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    /* Ensures container grows */
+}
+
+.card {
+    width: 100%;
+    min-height: 200px;
+    /* Allow card to start small */
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 8px;
+
+}
+
+.cvupload {
+    border: 2px solid #007bff;
+    /* Solid blue border initially */
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    transition: border 0.3s ease-in-out;
+    /* Smooth transition */
+}
+
+.cvupload:hover {
+    border-style: dashed;
+    /* Dashed blue border on hover */
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .main-content {
+        margin-left: 200px;
+        /* Reduce sidebar space */
+    }
+}
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+        /* Remove sidebar space on mobile */
+        padding: 10px;
+    }
+
+    .card {
+        padding: 15px;
+        /* Reduce padding for smaller screens */
+    }
+
+    .card-container {
+        padding: 5px;
+        /* Reduce spacing for a compact view */
+    }
+
+    .btn {
+        font-size: 14px;
+        /* Reduce button size */
+        padding: 5px 10px;
+    }
+}
+
+
+
+#editor-container {
+    width: 100%;
+    height: 150px;
+}
+
+.profile-container {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+}
+
+.camera-icon {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: rgb(219, 216, 216);
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type='file'] {
+    display: none;
+}
+
+
+.badge {
+    background-color: #A061F780;
+    color: #A061F7;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.more-badge{
+  background-color: #FFFFFF;  
+  color:#797A7A;
+}
+
+.course-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+  
+  
+    margin-bottom: 15px;
+}
+
+.course-title {
+    font-size: 10px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.course-duration {
+    font-size: 14px;
+    color: gray;
+   
+}
+
+.badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding:10px 10px 10px 10px;
+}
+
+.course-link {
+    font-size: 14px;
+    color: blue;
+    text-decoration: none;
+}
+.course-link:hover {
+    text-decoration: underline;
+}
+
+.delete-icon {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.delete-icon:hover{
+    color:red;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .course-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .badge-container {
+        justify-content: center;
+    }
+    .delete-icon {
+        margin-top: 10px;
+    }
+}
+
+.dropdown-menu {
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.pagination .page-link {
+    border-radius: 50px; 
+    padding: 6px 12px; 
+    font-size: small;
+    font-weight: bold;
+   
+}
+.pagination .active .page-link {
+    background-color: blue;
+    color: white;
+    border-color: blue;
+}
+.pagination .dots {
+    padding: 6px 12px;
+    color: gray;
+    pointer-events: none;
+    font-size: small;
+}
