@@ -13,7 +13,7 @@ body {
     padding-bottom: 5px;
 }
 
-
+/*
 .navbar {
     height: 60px;
     width: 100%;
@@ -32,7 +32,7 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
-    /* Adjust spacing between icons */
+    
     padding-bottom: 10px;
    font-size: 20px;
 }
@@ -44,7 +44,65 @@ body {
         padding-bottom: 10px;
     } 
     
+*/
+.navbar {
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+     background-color: #FFFFFF;
+   
 
+    
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 10px;
+  
+  font-size: 20px;
+    /* Adjust spacing between icons */
+
+}
+
+
+.profile{
+padding-bottom: 10px;
+}
+
+.profile3{
+    padding-bottom: 10px;
+} 
+/*
+.sidebar {
+    height: 100vh;
+    background-color: #f8f9fa;
+    position: fixed;
+    margin-top: 0px;
+    left: 0;
+    padding-top: 0px;
+    transition: all 0.3s ease-in-out;
+    z-index: 1050;
+    background-color: #FFFFFF;
+}
+
+
+
+#sidebar {
+    padding: 0 !important;
+    margin: 0 !important;
+    background-color: #FFFFFF;
+    height: 100vh;
+    width: 270px;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+*/
 
 .sidebar {
     height: 100vh;
@@ -69,11 +127,51 @@ body {
     max-width: 100%;
     overflow-x: hidden;
 }
+/*
+
+@media screen and (max-width: 1024px) {
+    .sidebar {
+        width: 220px;
+        
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        width: 0;
+        overflow: hidden;
+    }
+
+    .sidebar.open {
+        width: 250px;
+      
+    }
+
+
+}
+
+@media (min-width: 992px) {
+    #sidebar {
+        position: fixed;
+        left: 0;
+        top: 70px;
+       
+        height: calc(100vh - 60px);
+       
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-right: 1px solid #ddd;
+        z-index: 1040;
+        transform: none !important;
+    }
+}
+*/
 
 /* Responsive Design */
 @media screen and (max-width: 1024px) {
     .sidebar {
-        width: 220px;
+        width: 0;
         /* Reduce width for tablets */
     }
 }
@@ -163,13 +261,40 @@ body {
 
 
 }
-
+/*
 .main-content {
     margin-top: 90px;
     margin-left: 290px;
     background-color: #00000029;
     padding:7px 7px 7px 7px;
 
+}
+
+.card-container {
+    width: 100%;
+    padding: 10px 10px 0px 10px;
+    display: flex;
+    flex-direction: column;
+  
+}
+
+.card {
+    width: 100%;
+    min-height: 200px;
+   
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 8px;
+
+}
+*/
+
+.main-content {
+    margin-top: 70px;
+    margin-left: 270px;
+    background-color: #00000029;
+    padding:7px 7px 7px 7px;
+   
 }
 
 .card-container {
@@ -186,8 +311,7 @@ body {
     /* Allow card to start small */
     background-color: #FFFFFF;
     padding: 20px;
-    border-radius: 8px;
-
+   
 }
 
 .cvupload {
